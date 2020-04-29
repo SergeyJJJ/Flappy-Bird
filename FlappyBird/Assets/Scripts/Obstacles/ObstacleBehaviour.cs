@@ -8,4 +8,10 @@ public class ObstacleBehaviour : MonoBehaviour
     {
         transform.Translate(Vector2.left * _speed);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("sms");
+        gameObject.SetActive(false);
+    }
 }

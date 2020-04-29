@@ -5,7 +5,7 @@ public class ObstaclePool : MonoBehaviour
 {
     private List<GameObject> _obtaclePool;
     [SerializeField] private int _poolAmount = 10;
-    [SerializeField]private GameObject _obstacle;
+    [SerializeField] private GameObject _obstacle;
 
     public static ObstaclePool sharedInstance ;
 
@@ -24,14 +24,13 @@ public class ObstaclePool : MonoBehaviour
             newObstacle = Instantiate(_obstacle, _obstacle.transform.position, Quaternion.identity);
             newObstacle.SetActive(false);
             _obtaclePool.Add(newObstacle);
-
             newObstacle.transform.SetParent(sharedInstance.transform);
         }   
     }
 
     public GameObject GetPooledObstacle()
     {
-        for (var index = 0; index < _poolAmount; index++)
+        for (var index = 0; index < _obtaclePool.Count; index++)
         {
             if (!_obtaclePool[index].activeInHierarchy)
             {
