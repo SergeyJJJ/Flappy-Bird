@@ -16,7 +16,6 @@ public class BirdControll : MonoBehaviour
 
     private void Jump()
     {
-        Debug.Log("hello");
         _playerRigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
     }
 
