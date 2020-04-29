@@ -1,0 +1,45 @@
+{
+    "name": "PlayerInputSystem",
+    "maps": [
+        {
+            "name": "BirdControll",
+            "id": "e6288538-6d87-4ae7-b004-ecab928116f9",
+            "actions": [
+                {
+                    "name": "KeyboardJump",
+                    "type": "Button",
+                    "id": "daa4c5c5-7b89-423b-90ed-289945fd1d85",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0f2cd823-b923-4c9d-8640-a178ecb486e9",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "KeyboardJump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
