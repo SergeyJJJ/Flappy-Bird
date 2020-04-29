@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GroundMovement : MonoBehaviour
 {
-    [SerializeField] private float _speed = 2f;
+    [SerializeField] private float _speed = 0.04f;
     private float _repeatWidth;
     private Vector2 _startPosition;
     private BoxCollider2D _collider;
     
     private void Awake()
     {
-        float _adjustRepeatWidth = 0.3f;
+        float _adjustRepeatWidth = 0.11f;
 
         _startPosition = transform.position;
         _collider = GetComponent<BoxCollider2D>();

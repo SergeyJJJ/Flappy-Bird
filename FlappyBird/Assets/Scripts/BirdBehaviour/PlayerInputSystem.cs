@@ -32,7 +32,7 @@ public class @PlayerInputSystem : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""0f2cd823-b923-4c9d-8640-a178ecb486e9"",
                     ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""KeyboardJump"",
