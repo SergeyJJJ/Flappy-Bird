@@ -11,7 +11,6 @@ public class ObstacleBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("sms");
         gameObject.SetActive(false);
     }
 }

@@ -7,7 +7,7 @@ public class BirdControll : MonoBehaviour
     private Rigidbody2D _playerRigidbody;
     [SerializeField] private float _jumpForce = 10f;
     private float _upperBoundary = 7.39f;
-    private float _jumpSpeedLimit = 7f;
+    private float _jumpSpeedLimit = 5f;
 
     private void Awake()
     {
