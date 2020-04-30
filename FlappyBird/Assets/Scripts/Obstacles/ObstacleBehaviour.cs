@@ -11,6 +11,9 @@ public class ObstacleBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        gameObject.SetActive(false);
+        if (other.CompareTag("TurnOffObstacle"))
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
