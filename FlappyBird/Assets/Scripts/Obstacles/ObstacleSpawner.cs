@@ -2,8 +2,8 @@
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    [SerializeField] private float _spawnRepeatTime = 2f;
-    private float _spawnDelay = 2f;
+    [SerializeField] private float _spawnRepeatTime = 1.8f;
+    private float _spawnDelay = 1.5f;
     private GameObject _pooledObstacle;
     private float _upperSpawnPosition = 6.21f;
     private float _lowerSpawnPosition = 3.19f;

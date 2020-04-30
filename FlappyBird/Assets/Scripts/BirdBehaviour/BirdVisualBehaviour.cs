@@ -10,6 +10,7 @@ public class BirdVisualBehaviour : MonoBehaviour
     private void Start()
     {
         _playerRigidbody = GetComponent<Rigidbody2D>(); 
+        _birdAnimations.SetBool("Fly", true);
     }
 
     private void FixedUpdate()
@@ -19,7 +20,7 @@ public class BirdVisualBehaviour : MonoBehaviour
 
     private void Rotations()
     {
-        if (_playerRigidbody.velocity.y <= _velocityToRotate)
+        if (_playerRigidbody.velocity.y < _velocityToRotate)
         {
             DownwardRotation();
         }

@@ -3,11 +3,15 @@
 
 public class BirdControll : MonoBehaviour
 {
+    [SerializeField] private GameStateController _gameStateController;
     private PlayerInputSystem _inputActions;
     private Rigidbody2D _playerRigidbody;
+
     [SerializeField] private float _jumpForce = 10f;
     private float _upperBoundary = 7.39f;
     private float _jumpSpeedLimit = 5f;
+
+    private bool _isGameLaunched = false;
 
     private void Awake()
     {
@@ -40,7 +44,17 @@ public class BirdControll : MonoBehaviour
 
     private void Jump()
     {
+        RunMainGame();
         _playerRigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+    }
+
+    private void RunMainGame()
+    {
+        if (!_isGameLaunched)
+        {
+            _isGameLaunched = true;
+            _gameStateController.RunMainGameState();
+        }
     }
 
     private void OnEnable()
