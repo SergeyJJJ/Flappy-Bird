@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
@@ -8,19 +9,24 @@ public class ObstacleSpawner : MonoBehaviour
     private float _upperSpawnPosition = 6.21f;
     private float _lowerSpawnPosition = 3.19f;
 
-    private void Start()
+    /*private void Start()
     {
-        InvokeRepeating("SpawnObstacle", _spawnDelay, _spawnRepeatTime);
-    }
+        //InvokeRepeating("SpawnObstacle", _spawnDelay, _spawnRepeatTime);
+        StartCoroutine("SpawnObstacleRoutine");
+    }*/
 
-    private void SpawnObstacle()
+    private IEnumerator SpawnObstacleRoutine()
     {
-        _pooledObstacle = ObstaclePool.sharedInstance.GetPooledObstacle();
-
-        if (_pooledObstacle != null)
+        while (true)
         {
-            _pooledObstacle.SetActive(true);
-            _pooledObstacle.transform.position = GetRandomSpawnHight();
+            _pooledObstacle = ObstaclePool.sharedInstance.GetPooledObstacle();
+
+            if (_pooledObstacle != null)
+            {
+                _pooledObstacle.SetActive(true);
+                _pooledObstacle.transform.position = GetRandomSpawnHight();
+            }
+            yield return new WaitForSeconds(_spawnRepeatTime);
         }
     }
 

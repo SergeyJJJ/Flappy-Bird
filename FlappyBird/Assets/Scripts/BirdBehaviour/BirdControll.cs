@@ -3,6 +3,7 @@
 
 public class BirdControll : MonoBehaviour
 {
+    [SerializeField] private AudioHandler _audioHandler;
     [SerializeField] private GameStateController _gameStateController;
     private PlayerInputSystem _inputActions;
     private Rigidbody2D _playerRigidbody;
@@ -46,6 +47,7 @@ public class BirdControll : MonoBehaviour
     {
         RunMainGame();
         _playerRigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+        _audioHandler.PlayWing();
     }
 
     private void RunMainGame()

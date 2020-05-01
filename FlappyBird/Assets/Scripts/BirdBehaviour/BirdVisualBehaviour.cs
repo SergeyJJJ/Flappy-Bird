@@ -56,4 +56,10 @@ public class BirdVisualBehaviour : MonoBehaviour
             _isAnimationActive = true;
         }
     }
+
+    public void StopAnimation()
+    {
+        DownwardRotation();
+        _birdAnimations.SetBool("Fly", false);
+    }
 }

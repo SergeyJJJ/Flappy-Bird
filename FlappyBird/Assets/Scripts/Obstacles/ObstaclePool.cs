@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObstaclePool : MonoBehaviour
 {
-    private List<GameObject> _obtaclePool;
+    private List<GameObject> _obtaclePool = new List<GameObject>();
     [SerializeField] private int _poolAmount = 10;
     [SerializeField] private GameObject _obstacle;
 
@@ -16,8 +16,6 @@ public class ObstaclePool : MonoBehaviour
 
     private void Start()
     {
-        _obtaclePool = new List<GameObject>();
-
         for (var index = 0; index < _poolAmount; index++)
         {
             GameObject newObstacle;
