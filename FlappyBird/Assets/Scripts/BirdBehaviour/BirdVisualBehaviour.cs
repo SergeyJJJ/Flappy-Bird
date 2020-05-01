@@ -4,7 +4,7 @@ public class BirdVisualBehaviour : MonoBehaviour
 {
     private Rigidbody2D _playerRigidbody;    
     [SerializeField]private Animator _birdAnimations;
-    private float _velocityToRotate = 0f;
+    private float _velocityToRotate = -2.5f;
     private bool _isAnimationActive = false;
 
     private void Start()

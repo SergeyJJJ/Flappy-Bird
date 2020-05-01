@@ -54,7 +54,7 @@ public class GameStateController : MonoBehaviour
     private void StopObstacleMovement()
     {
         _obstaclesBehaviour = _obstaclePool.GetComponentsInChildren<ObstacleBehaviour>();
-
+        
         for (var index = 0; index < _obstaclesBehaviour.Length; index++)
         {
             _obstaclesBehaviour[index].StopMovement();
