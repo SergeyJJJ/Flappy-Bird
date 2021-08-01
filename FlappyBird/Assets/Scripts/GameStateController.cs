@@ -18,10 +18,12 @@ public class GameStateController : MonoBehaviour
     [SerializeField] private GameObject _mainGameUI;
     [SerializeField] private GameObject _endGameUI;
 
+
     void Start()
     {
         RunPreGameState();
     }
+
 
     public void RunPreGameState()
     {
@@ -29,6 +31,7 @@ public class GameStateController : MonoBehaviour
         _birdVisualBehaviour.enabled = false;
         //_obstacleSpawner.enabled = false;
     }
+
 
     public void RunMainGameState()
     {
@@ -38,6 +41,7 @@ public class GameStateController : MonoBehaviour
         _obstacleSpawner.StartCoroutine("SpawnObstacleRoutine");
         _mainGameUI.SetActive(true);
     }
+
 
     public void RunEndGameState()
     {  
@@ -51,6 +55,7 @@ public class GameStateController : MonoBehaviour
         _endGameUI.SetActive(true);
     }
 
+
     private void StopObstacleMovement()
     {
         _obstaclesBehaviour = _obstaclePool.GetComponentsInChildren<ObstacleBehaviour>();
@@ -60,6 +65,7 @@ public class GameStateController : MonoBehaviour
             _obstaclesBehaviour[index].StopMovement();
         }
     }
+
 
     public void RestartScene()
     {

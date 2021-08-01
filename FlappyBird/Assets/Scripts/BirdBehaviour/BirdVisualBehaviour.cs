@@ -7,16 +7,19 @@ public class BirdVisualBehaviour : MonoBehaviour
     private float _velocityToRotate = -2.5f;
     private bool _isAnimationActive = false;
 
+
     private void Start()
     {
         _playerRigidbody = GetComponent<Rigidbody2D>(); 
         _birdAnimations.SetBool("Fly", true);
     }
 
+
     private void FixedUpdate()
     {
         Rotations();
     }
+
 
     private void Rotations()
     {
@@ -29,6 +32,7 @@ public class BirdVisualBehaviour : MonoBehaviour
             UpwardRotations();
         }
     }
+
 
     private void DownwardRotation()
     {
@@ -44,6 +48,7 @@ public class BirdVisualBehaviour : MonoBehaviour
 
     }
 
+
     private void UpwardRotations()
     {
         Quaternion targetRotation = Quaternion.Euler(0, 0, 20);
@@ -56,6 +61,7 @@ public class BirdVisualBehaviour : MonoBehaviour
             _isAnimationActive = true;
         }
     }
+
 
     public void StopAnimation()
     {

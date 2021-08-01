@@ -7,6 +7,7 @@ public class GroundMovement : MonoBehaviour
     private Vector2 _startPosition;
     private BoxCollider2D _collider;
     
+
     private void Awake()
     {
         float _adjustRepeatWidth = 0.11f;
@@ -16,16 +17,19 @@ public class GroundMovement : MonoBehaviour
         _repeatWidth = (_collider.size.x / 2) + _adjustRepeatWidth;
     }
 
+
     private void FixedUpdate()
     {
         Move();
         RepeatPosition();
     }
 
+
     private void Move()
     {
         transform.Translate(Vector2.left * _speed);
     }
+
 
     private void RepeatPosition()
     {

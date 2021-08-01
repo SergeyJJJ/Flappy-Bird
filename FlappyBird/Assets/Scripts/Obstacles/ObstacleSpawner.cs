@@ -9,11 +9,6 @@ public class ObstacleSpawner : MonoBehaviour
     private float _upperSpawnPosition = 6.21f;
     private float _lowerSpawnPosition = 3.19f;
 
-    /*private void Start()
-    {
-        //InvokeRepeating("SpawnObstacle", _spawnDelay, _spawnRepeatTime);
-        StartCoroutine("SpawnObstacleRoutine");
-    }*/
 
     private IEnumerator SpawnObstacleRoutine()
     {
@@ -29,6 +24,7 @@ public class ObstacleSpawner : MonoBehaviour
             yield return new WaitForSeconds(_spawnRepeatTime);
         }
     }
+
 
     private Vector2 GetRandomSpawnHight()
     {

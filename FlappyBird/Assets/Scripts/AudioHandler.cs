@@ -10,16 +10,19 @@ public class AudioHandler : MonoBehaviour
     [SerializeField] private AudioClip _wing;
     [SerializeField] private AudioClip _lose;
 
+
     public void PlayLose()
     {
         _audioSourse.PlayOneShot(_hit);
         _audioSourse.PlayOneShot(_lose);
     }
 
+
     public void PlayPoint()
     {
         _audioSourse.PlayOneShot(_point, 0.9f);
     }
+
 
     public void PlayWing()
     {

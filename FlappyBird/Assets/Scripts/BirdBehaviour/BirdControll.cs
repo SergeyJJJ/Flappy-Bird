@@ -14,6 +14,7 @@ public class BirdControll : MonoBehaviour
 
     private bool _isGameLaunched = false;
 
+
     private void Awake()
     {
         _playerRigidbody = GetComponent<Rigidbody2D>();
@@ -21,11 +22,13 @@ public class BirdControll : MonoBehaviour
         _inputActions.BirdControll.KeyboardJump.performed += ctx => Jump();
     }
 
+
     private void Update()
     {
         PreventBirdOutOfBoundaries();
         SpeedLimit();
     }
+
 
     private void PreventBirdOutOfBoundaries()
     {
@@ -35,6 +38,7 @@ public class BirdControll : MonoBehaviour
         }
     }
     
+
     private void SpeedLimit()
     {
         if (_playerRigidbody.velocity.y > _jumpSpeedLimit)
@@ -43,12 +47,14 @@ public class BirdControll : MonoBehaviour
         }
     }
 
+
     private void Jump()
     {
         RunMainGame();
         _playerRigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
         _audioHandler.PlayWing();
     }
+
 
     private void RunMainGame()
     {
@@ -59,10 +65,12 @@ public class BirdControll : MonoBehaviour
         }
     }
 
+
     private void OnEnable()
     {
         _inputActions.BirdControll.Enable();    
     }
+
 
     private void OnDisable()
     {

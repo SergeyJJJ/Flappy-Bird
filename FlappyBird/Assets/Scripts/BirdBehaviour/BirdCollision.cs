@@ -8,10 +8,12 @@ public class BirdCollision : MonoBehaviour
     private bool _isPlayed = false;
     private GameStateController _gameStateController;
 
+
     private void Start()
     {
         _gameStateController = FindObjectOfType<GameStateController>();
     }
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {

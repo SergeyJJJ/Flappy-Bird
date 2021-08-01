@@ -7,10 +7,12 @@ public class BirdScoreTracker : MonoBehaviour
     [SerializeField] private Text _scoreText;
     [SerializeField] private AudioHandler _audioHandler;
 
+
     private void Update()
     {
         _scoreText.text = _score.ToString();
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {

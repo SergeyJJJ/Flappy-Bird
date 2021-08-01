@@ -9,10 +9,12 @@ public class ObstaclePool : MonoBehaviour
 
     public static ObstaclePool sharedInstance ;
 
+
     private void Awake()
     {
         sharedInstance = this;
     }
+
 
     private void Start()
     {
@@ -25,6 +27,7 @@ public class ObstaclePool : MonoBehaviour
             newObstacle.transform.SetParent(sharedInstance.transform);
         }   
     }
+
 
     public GameObject GetPooledObstacle()
     {
